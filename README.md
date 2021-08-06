@@ -1,26 +1,3 @@
-Calculator
----
-<img src="Logotype primary.png" width="60%" height="60%" />
+## Calculator
 
-Created with *create-react-app*. See the [full create-react-app guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-
-
-Try It
----
-
-[ahfarmer.github.io/calculator](https://ahfarmer.github.io/calculator/)
-
-
-
-Install
----
-
-`npm install`
-
-
-
-Usage
----
-
-`npm start`
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b4dde85b-c0a3-4ad4-8072-0bd421209a84/deploy-status)](https://app.netlify.com/sites/loving-lamport-82d4bc/deploys)
