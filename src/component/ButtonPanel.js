@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 import "./ButtonPanel.css";
 
+import { OptimizelyFeature } from "@optimizely/react-sdk";
+
 export default class ButtonPanel extends React.Component {
   static propTypes = {
     clickHandler: PropTypes.func,
@@ -22,6 +24,20 @@ export default class ButtonPanel extends React.Component {
           <Button name="%" clickHandler={this.handleClick} />
           <Button name="÷" clickHandler={this.handleClick} orange />
         </div>
+        <OptimizelyFeature feature="calculator_scientific_functions">
+          {(isEnabled, variables) => {
+            if (isEnabled) {
+              return (
+                <div>
+                  <Button name="sin" clickHandler={this.handleClick} />
+                  <Button name="cos" clickHandler={this.handleClick} />
+                  <Button name="tan" clickHandler={this.handleClick} />
+                  <Button name="" clickHandler={this.handleClick} orange />
+                </div>
+              );
+            }
+          }}
+        </OptimizelyFeature>
         <div>
           <Button name="7" clickHandler={this.handleClick} />
           <Button name="8" clickHandler={this.handleClick} />

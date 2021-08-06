@@ -158,16 +158,28 @@ describe("calculate", function() {
   //Test that pressing the multiplication or division sign multiple times should not affect the current computation
   test(["2", "x", "x"], {
     total: "2",
-    operation: "x"
+    operation: "x",
   });
 
   test(["2", "÷", "÷"], {
     total: "2",
-    operation: "÷"
+    operation: "÷",
   });
 
   test(["2", "÷", "x", "+", "-", "x"], {
     total: "2",
-    operation: 'x'
+    operation: "x",
+  });
+
+  test(["90", "sin"], {
+    next: "1",
+  });
+
+  test(["0", "cos"], {
+    next: "1",
+  });
+
+  test(["45", "tan"], {
+    next: "0.9999999999999999",
   });
 });

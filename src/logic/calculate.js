@@ -101,6 +101,33 @@ export default function calculate(obj, buttonName) {
     return {};
   }
 
+  if (buttonName === "sin") {
+    if (obj.next) {
+      return {
+        next: Math.sin(Big(obj.next) * (Math.PI / 180)).toString(),
+      };
+    }
+    return {};
+  }
+
+  if (buttonName === "cos") {
+    if (obj.next) {
+      return {
+        next: Math.cos(Big(obj.next) * (Math.PI / 180)).toString(),
+      };
+    }
+    return {};
+  }
+
+  if (buttonName === "tan") {
+    if (obj.next) {
+      return {
+        next: Math.tan(Big(obj.next) * (Math.PI / 180)).toString(),
+      };
+    }
+    return {};
+  }
+
   // Button must be an operation
 
   // When the user presses an operation button without having entered
